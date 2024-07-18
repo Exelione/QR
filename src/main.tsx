@@ -5,11 +5,11 @@ import {
 } from "react-router-dom";
 import QrCodeGenerator from './QrCodeGenerator';
 import QrCodeScanner from './QrCodeScanner';
-import Navigation from './Navigation';
+import HomePage from './HomePage';
 const router = createBrowserRouter([
   {
     path: "/",
-    element: <Navigation />,
+    element: <HomePage />,
   },
   {
     path: "/generate",

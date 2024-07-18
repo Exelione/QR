@@ -1,7 +1,7 @@
 import QRCode from 'qrcode.react';
 import { useState } from 'react';
 import styles from './styles.module.css';
-import { Link } from 'react-router-dom';
+import Navigation from './Navigation';
 
 const QrCodeGenerator = () => {
     const [text, setText] = useState('');
@@ -28,8 +28,7 @@ const QrCodeGenerator = () => {
     return (
         
         <div className={styles.container}>
-            <Link className={styles.link} to="/">Go Back</Link>
-            <Link className={styles.link} to="/scan">Scan QR</Link>
+            <Navigation/>
             {result && <QRCode value={result} size={250} className={styles.qrCode} renderAs="svg"/>}
 
             <input placeholder='Enter text' type='text' value={text} onChange={onChangeHandler} />
