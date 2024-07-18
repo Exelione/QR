@@ -1,13 +1,14 @@
 import QRCode from 'qrcode.react';
 import { useState } from 'react';
-
+import styles from './styles.module.css';
+import { Link } from 'react-router-dom';
 
 const QrCodeGenerator = () => {
     const [text, setText] = useState('');
-    const [isShowQRCode, setIsShowQRCode] = useState('');
+    const [result, setResult] = useState('');
     const onClickHandler = () => {
         if (text.trim().length) {
-            setIsShowQRCode(text);
+            setResult(text);
             setText('');
             
         }
@@ -20,15 +21,18 @@ const QrCodeGenerator = () => {
     const onChangeHandler = (e: React.ChangeEvent<HTMLInputElement>) => {
         
         setText(e.target.value);
-        setIsShowQRCode('')
+        setResult('')
     }
 
 
     return (
-        <div style={{ display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'center', height: '100vh', gap: '30px' }}>
-            {isShowQRCode && <QRCode value={isShowQRCode} />}
+        
+        <div className={styles.container}>
+            <Link className={styles.link} to="/">Go Back</Link>
+            <Link className={styles.link} to="/scan">Scan QR</Link>
+            {result && <QRCode value={result} size={250} className={styles.qrCode} renderAs="svg"/>}
 
-            <input type='text' value={text} onChange={onChangeHandler} />
+            <input placeholder='Enter text' type='text' value={text} onChange={onChangeHandler} />
             <button onClick={onClickHandler} type='button'>Generate QR Code</button>
         </div>
     )

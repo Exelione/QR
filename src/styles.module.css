@@ -1,0 +1,111 @@
+:root {
+  --color-primary: #000;
+  --color-secondary: #fff;
+  --color-background: #d3d3d3;
+  --color-input-background: #dad4d4;
+  --color-button-hover: #867979;
+}
+
+body {
+  background-color: var(--color-input-background);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+body .link {
+  text-decoration: none;
+  color: var(--color-primary);
+  font-size: 1.2rem;
+  -webkit-transition: color 0.3s ease;
+  transition: color 0.3s ease;
+}
+body .link:hover {
+  color: var(--color-button-hover);
+}
+body .navigation {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 20px;
+  margin-top: 50vh;
+}
+body .container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 2.375rem;
+  height: 98vh;
+  width: 350px;
+  border: 1px solid var(--color-primary);
+  border-radius: 0.5rem;
+  background-color: var(--color-background);
+  position: relative;
+}
+body .container .link:first-child {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+}
+body .container .link:nth-child(2) {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+}
+body .container p {
+  font: 1em sans-serif;
+  margin-top: 40%;
+  padding: 0 18px;
+}
+body .container h1 {
+  font-size: 1.8rem;
+  margin-bottom: 60%;
+}
+body .container input {
+  border-radius: 0.5rem;
+  width: 12.5rem;
+  height: 3.125rem;
+  font-size: 1.125rem;
+  padding: 0 0.3125rem;
+  background-color: var(--color-input-background);
+  border: 1px solid var(--color-primary);
+  outline: none;
+}
+body .container button {
+  background-color: var(--color-primary);
+  color: var(--color-secondary);
+  border-radius: 0.5rem;
+  width: 12.5rem;
+  height: 5rem;
+  -webkit-transition: background-color 0.3s ease;
+  transition: background-color 0.3s ease;
+  border: none;
+  cursor: pointer;
+}
+body .container button:hover {
+  background-color: var(--color-button-hover);
+}
+body .container svg path:last-child {
+  fill: var(--color-primary);
+}
+body .container svg path:first-child {
+  fill: var(--color-background);
+}
