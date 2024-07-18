@@ -11,45 +11,44 @@ body {
   background-color: var(--color-input-background);
   display: flex;
   justify-content: center;
-  .homePage{
+
+  .homePage {
     height: 100vh;
-    
     display: flex;
     align-items: center;
-    div{
-        display: flex;
-        flex-direction: column;
-        
-        a{
-          text-align: center;
-        }
+    div {
+      display: flex;
+      flex-direction: column;
 
+      a {
+        text-align: center;
+      }
     }
-    
-    
-  }
+  };
   
-
   .navigation {
     display: flex;
     justify-content: space-between;
     align-items: center;
     gap: 20px;
+
     .link {
       text-decoration: none;
       color: var(--color-primary);
       font-size: 1.2rem;
       transition: color .3s ease;
-  
+
       &:hover {
         color: var(--color-button-hover);
       }
     }
   }
-  .mainContainer{
+
+  .mainContainer {
     display: flex;
     flex-direction: column;
   }
+
   .container {
     display: flex;
     flex-direction: column;
@@ -67,41 +66,47 @@ body {
       position: absolute;
       top: 20px;
       left: 20px;
-      
+
     }
+
     .link:nth-child(2) {
       position: absolute;
       top: 20px;
       right: 20px;
     }
-    .link:nth-child(3){
+
+    .link:nth-child(3) {
       position: absolute;
       bottom: 20px;
       left: 20px;
-    } 
-    .link:nth-child(4){
+    }
+
+    .link:nth-child(4) {
       position: absolute;
       bottom: 20px;
       right: 20px;
     }
-    ol{
+
+    ol {
       display: flex;
       flex-direction: column;
       justify-content: center;
       gap: 10px;
       padding: 0 18px;
       font-size: 24px;
-      li{
+
+      li {
         list-style: none;
         text-align: center;
         color: var(--color-button-hover);
       }
     }
+
     p {
       font: 1em sans-serif;
       margin-top: 40%;
       padding: 0 18px;
-      
+
     }
 
     h1 {
