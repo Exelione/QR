@@ -8,7 +8,7 @@ import LayOut from './LayOut';
 
 ReactDOM.createRoot(document.getElementById('root')!).render(
 
-  <BrowserRouter>
+  <BrowserRouter basename='/'>
   <LayOut/>
   </BrowserRouter>
 
