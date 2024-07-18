@@ -46,19 +46,20 @@ const Navigation = () => {
       )
     default:
       document.title = "QR code";
-      break;
+      return (
+
+        <div className={styles.navigation}>
+          <Link className={styles.link} to="/scan">Scan QR code</Link>
+          <Link className={styles.link} to="/generate">Generate QR code</Link>
+          <Link className={styles.link} to="/scans">Scans</Link>
+          <Link className={styles.link} to="/generation">Generations</Link>
+        </div>
+    
+    
+      )
+      
   }
-  return (
 
-    <div className={styles.navigation}>
-      <Link className={styles.link} to="/scan">Scan QR code</Link>
-      <Link className={styles.link} to="/generate">Generate QR code</Link>
-      <Link className={styles.link} to="/scans">Scans</Link>
-      <Link className={styles.link} to="/generation">Generation</Link>
-    </div>
-
-
-  )
 }
 
 export default Navigation
