@@ -1,7 +1,9 @@
 import QRCode from 'qrcode.react';
 import { useState } from 'react';
-import styles from './styles.module.css';
-import Navigation from './Navigation';
+import styles from "../../styles.module.css";
+import Navigation from '../Navigation/Navigation';
+import { GENERATE_DATA } from '../../constants';
+
 
 const QrCodeGenerator = () => {
     const [text, setText] = useState('');
@@ -10,6 +12,15 @@ const QrCodeGenerator = () => {
         if (text.trim().length) {
             setResult(text);
             setText('');
+            const prevResult: string[] = JSON.parse(localStorage.getItem(GENERATE_DATA) || '[]');
+
+            localStorage.setItem(
+                GENERATE_DATA,
+                JSON.stringify([...prevResult, text]
+                .filter((value, index, self) => self.indexOf(value) === index)
+                
+              )
+            ); 
             
         }
         else {
