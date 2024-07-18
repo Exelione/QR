@@ -7,9 +7,10 @@ const ScanHistory = () => {
     <div className={styles.container}>
         <Navigation/>
         <h1>Scan History</h1>
-        {history && <ol>
+        {history ? <ol>
             {JSON.parse(history).map((item: string) => <li>{item}</li>)}
-        </ol>}
+        </ol>
+        : <p>No history found</p>}
         
 
         </div>

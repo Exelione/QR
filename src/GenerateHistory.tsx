@@ -9,7 +9,7 @@ const GenerateHistory = () => {
         <Navigation />
         <h1>Generation History</h1>
         {!history.length ? 
-        <h1>No history</h1> : 
+        <p>No history found</p> : 
         <ol>
           {history.map((item)=> <li>{item}</li>)}
         </ol>
