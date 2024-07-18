@@ -16,16 +16,25 @@ body {
           justify-content: center;
 }
 body .homePage {
+  height: 100vh;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  height: 98vh;
+}
+body .homePage div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+body .homePage div a {
+  text-align: center;
 }
 body .navigation {
   display: -webkit-box;
@@ -48,6 +57,15 @@ body .navigation .link {
 }
 body .navigation .link:hover {
   color: var(--color-button-hover);
+}
+body .mainContainer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
 }
 body .container {
   display: -webkit-box;
@@ -81,6 +99,36 @@ body .container .link:nth-child(2) {
   top: 20px;
   right: 20px;
 }
+body .container .link:nth-child(3) {
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+}
+body .container .link:nth-child(4) {
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+}
+body .container ol {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  gap: 10px;
+  padding: 0 18px;
+  font-size: 24px;
+}
+body .container ol li {
+  list-style: none;
+  text-align: center;
+  color: var(--color-button-hover);
+}
 body .container p {
   font: 1em sans-serif;
   margin-top: 40%;
@@ -88,7 +136,7 @@ body .container p {
 }
 body .container h1 {
   font-size: 1.8rem;
-  margin-bottom: 60%;
+  margin-bottom: 40%;
 }
 body .container input {
   border-radius: 0.5rem;
