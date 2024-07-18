@@ -18,6 +18,7 @@ const LayOut = () => {
                 <Route path="/generate" element={<QrCodeGenerator />} />
                 <Route path="/scans" element={<ScanHistory />} />
                 <Route path="/generation" element={<GenerateHistory />} />
+                <Route path="*" element={<HomePage />} />
             </Routes>
         </div>
     )
