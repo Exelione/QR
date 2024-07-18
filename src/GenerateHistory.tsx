@@ -11,7 +11,7 @@ const GenerateHistory = () => {
         {!history.length ? 
         <p>No history found</p> : 
         <ol>
-          {history.map((item)=> <li>{item}</li>)}
+          {history.map((item)=> <li key={item}>{item}</li>)}
         </ol>
         }
     </div>
