@@ -1,19 +1,15 @@
 import ReactDOM from 'react-dom/client';
-import style from './styles.module.css';
 import {
   createBrowserRouter,
-  Link,
   RouterProvider,
 } from "react-router-dom";
 import QrCodeGenerator from './QrCodeGenerator';
 import QrCodeScanner from './QrCodeScanner';
+import Navigation from './Navigation';
 const router = createBrowserRouter([
   {
     path: "/",
-    element: <div className={style.navigation}>
-      <Link className={style.link} to="/scan">Scan QR code</Link> 
-      <Link className={style.link} to="/generate">Generate QR code</Link>
-      </div>
+    element: <Navigation />,
   },
   {
     path: "/generate",
