@@ -1,3 +1,4 @@
+import QRCode from "qrcode.react";
 import Navigation from "./components/Navigation/Navigation";
 import { GENERATE_DATA } from "./constants";
 import styles from "./styles.module.css";
@@ -11,7 +12,11 @@ const GenerateHistory = () => {
         {!history.length ? 
         <p>No history found</p> : 
         <ol>
-          {history.map((item)=> <li key={item}>{item}</li>)}
+          {history.map((item)=> <li key={item}>
+          {<QRCode value={item} size={50} className={styles.qrCode} renderAs="svg"/>}
+            {item}
+          </li>
+          )}
         </ol>
         }
     </div>

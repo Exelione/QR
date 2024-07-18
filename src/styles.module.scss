@@ -25,7 +25,7 @@ body {
       }
     }
   };
-  
+
   .navigation {
     display: flex;
     justify-content: space-between;
@@ -90,15 +90,21 @@ body {
     ol {
       display: flex;
       flex-direction: column;
-      justify-content: center;
+      align-items: flex-start;
       gap: 10px;
       padding: 0 18px;
       font-size: 24px;
 
       li {
-        list-style: none;
-        text-align: center;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        word-break: break-all;
         color: var(--color-button-hover);
+        svg{
+          flex-shrink: 0;
+        }
       }
     }
 
@@ -110,6 +116,7 @@ body {
     }
 
     h1 {
+      text-align: center;
       font-size: 1.8rem;
       margin-bottom: 40%;
     }
