@@ -1,6 +1,7 @@
 import ReactDOM from 'react-dom/client';
-import {HashRouter } from "react-router-dom";
+import { HashRouter } from "react-router-dom";
 import LayOut from './LayOut';
+import { StrictMode } from 'react';
 
 
 
@@ -8,9 +9,9 @@ import LayOut from './LayOut';
 
 ReactDOM.createRoot(document.getElementById('root')!).render(
 
-  
-<HashRouter>
-  <LayOut/>
-</HashRouter>
-
+  <StrictMode>
+    <HashRouter>
+      <LayOut />
+    </HashRouter>
+  </StrictMode>
 )
