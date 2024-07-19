@@ -132,6 +132,7 @@ body .container ol li {
 body .container ol li svg {
   -ms-flex-negative: 0;
       flex-shrink: 0;
+  cursor: pointer;
 }
 body .container ol li button {
   -ms-flex-negative: 0;
@@ -178,4 +179,22 @@ body .container svg path:last-child {
 }
 body .container svg path:first-child {
   fill: var(--color-background);
+}
+body .fullScreenOverlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.8);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  z-index: 1000;
 }
