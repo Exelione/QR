@@ -124,6 +124,9 @@ body .container ol li {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   width: 100%;
   gap: 18px;
   word-break: break-all;
@@ -147,6 +150,7 @@ body .container p {
 }
 body .container h1 {
   text-align: center;
+  word-break: break-all;
   font-size: 1.8rem;
   margin-bottom: 40%;
 }

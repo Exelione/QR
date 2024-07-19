@@ -11,7 +11,7 @@ const Navigation = () => {
           <Link className={styles.link} to="/">Go home</Link>
           <Link className={styles.link} to="/generate">Generate QR code</Link>
           <Link className={styles.link} to="/scans">Scans</Link>
-          <Link className={styles.link} to="/generation">Generation</Link>
+          <Link className={styles.link} to="/generation">Generations</Link>
         </div>
       )
     case "#/generate":
@@ -21,7 +21,7 @@ const Navigation = () => {
           <Link className={styles.link} to="/">Go home</Link>
           <Link className={styles.link} to="/scan">Scan QR code</Link>
           <Link className={styles.link} to="/scans">Scans</Link>
-          <Link className={styles.link} to="/generation">Generation</Link>
+          <Link className={styles.link} to="/generation">Generations</Link>
         </div>
       )
     case "#/scans":
@@ -31,7 +31,7 @@ const Navigation = () => {
           <Link className={styles.link} to="/">Go home</Link>
           <Link className={styles.link} to="/scan">Scan QR code</Link>
           <Link className={styles.link} to="/generate">Generate QR code</Link>
-          <Link className={styles.link} to="/generation">Generation</Link>
+          <Link className={styles.link} to="/generation">Generations</Link>
         </div>
       )
     case "#/generation":
