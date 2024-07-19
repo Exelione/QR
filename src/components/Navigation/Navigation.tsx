@@ -3,8 +3,8 @@ import styles from "../../styles.module.css";
 
 
 const Navigation = () => {
-  switch (window.location.pathname) {
-    case "/scan":
+  switch (window.location.hash) {
+   case "#/scan":
       document.title = "Scan QR code";
       return (
         <div className={styles.navigation}>
@@ -14,7 +14,7 @@ const Navigation = () => {
           <Link className={styles.link} to="/generation">Generation</Link>
         </div>
       )
-    case "/generate":
+    case "#/generate":
       document.title = "Generate QR code";
       return (
         <div className={styles.navigation}>
@@ -24,7 +24,7 @@ const Navigation = () => {
           <Link className={styles.link} to="/generation">Generation</Link>
         </div>
       )
-    case "/scans":
+    case "#/scans":
       document.title = "Scan History";
       return (
         <div className={styles.navigation}>
@@ -34,7 +34,7 @@ const Navigation = () => {
           <Link className={styles.link} to="/generation">Generation</Link>
         </div>
       )
-    case "/generation":
+    case "#/generation":
       document.title = "Generation History";
       return (
         <div className={styles.navigation}>
